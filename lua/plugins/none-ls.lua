@@ -8,11 +8,11 @@ return {
         null_ls.builtins.formatting.stylua,
 
         -- JAVASCRIPT / TYPESCRIPT
-        null_ls.builtins.diagostics.eslint,
+        --        null_ls.builtins.diagnostics.eslint_d,
         null_ls.builtins.formatting.prettier,
       }
     })
 
-    vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+    vim.keymap.set('n', "<leader>gf", vim.lsp.buf.format, {})
   end
 }
