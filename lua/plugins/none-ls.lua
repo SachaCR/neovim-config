@@ -1,0 +1,18 @@
+return {
+  "nvimtools/none-ls.nvim",
+  config = function()
+    local null_ls = require("null-ls")
+    null_ls.setup({
+      source = {
+        -- LUA
+        null_ls.builtins.formatting.stylua,
+
+        -- JAVASCRIPT / TYPESCRIPT
+        null_ls.builtins.diagostics.eslint,
+        null_ls.builtins.formatting.prettier,
+      }
+    })
+
+    vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+  end
+}
