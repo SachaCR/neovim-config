@@ -3,7 +3,12 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
+
+vim.opt.winborder = "rounded"
+vim.opt.signcolumn  = "yes"
+
 vim.g.mapleader = " "
+
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 vim.keymap.set('i', '<C-space>', function()
@@ -23,4 +28,4 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "120"
