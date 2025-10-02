@@ -30,4 +30,20 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
-vim.opt.colorcolumn = "120"
+-- vim.opt.colorcolumn = "120"
+
+vim.cmd([[
+  hi Normal guibg=NONE ctermbg=NONE
+  hi NormalNC guibg=NONE ctermbg=NONE
+  hi EndOfBuffer guibg=NONE ctermbg=NONE
+]])
+
+-- Normal line numbers (all lines)
+vim.cmd("hi LineNr guifg=#7aa2f7 gui=bold")
+
+-- Current line number (where cursor is)
+vim.cmd("hi CursorLineNr guifg=#ff9e64 gui=bold")
+
+-- Relative numbers above and below
+vim.cmd("hi LineNrAbove guifg=#9ece6a")
+vim.cmd("hi LineNrBelow guifg=#9ece6a")
