@@ -15,6 +15,8 @@ vim.keymap.set('i', '<C-space>', function()
   vim.lsp.completion.get()
 end)  
 
+vim.keymap.set('n', "<C-d>", "<C-d>zz")
+vim.keymap.set('n', "<C-u>", "<C-u>zz")
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
