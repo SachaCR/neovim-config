@@ -3,6 +3,7 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
+vim.cmd("set completeopt=menu,menuone,noselect,noinsert")
 
 vim.opt.winborder = "rounded"
 vim.opt.signcolumn  = "yes"
@@ -47,3 +48,4 @@ vim.cmd("hi CursorLineNr guifg=#ff9e64 gui=bold")
 -- Relative numbers above and below
 vim.cmd("hi LineNrAbove guifg=#9ece6a")
 vim.cmd("hi LineNrBelow guifg=#9ece6a")
+

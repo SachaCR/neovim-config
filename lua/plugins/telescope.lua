@@ -16,5 +16,4 @@ return {
     vim.keymap.set('n', "<leader>p", "<cmd>Telescope git_files<cr>", {})
     vim.keymap.set('n', "<leader>f", "<cmd>Telescope find_files<cr>", {})
   end
-	
 }
