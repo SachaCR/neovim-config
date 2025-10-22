@@ -33,17 +33,28 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 -- vim.opt.colorcolumn = "120"
 
+-- Disable arrow keys in all modes to force me use hjkl
+vim.keymap.set({ 'n', 'i', 'v' }, '<Up>', '<Nop>', opts)
+vim.keymap.set({ 'n', 'i', 'v' }, '<Down>', '<Nop>', opts)
+vim.keymap.set({ 'n', 'i', 'v' }, '<Left>', '<Nop>', opts)
+vim.keymap.set({ 'n', 'i', 'v' }, '<Right>', '<Nop>', opts)
+
+-- Remove background to see the terminal background instead 
 vim.cmd([[
   hi Normal guibg=NONE ctermbg=NONE
   hi NormalNC guibg=NONE ctermbg=NONE
   hi EndOfBuffer guibg=NONE ctermbg=NONE
 ]])
 
+
+-- Makes line numbers more visible
+
 -- Normal line numbers (all lines)
 vim.cmd("hi LineNr guifg=#7aa2f7 gui=bold")
 
--- Current line number (where cursor is)
-vim.cmd("hi CursorLineNr guifg=#ff9e64 gui=bold")
+-- Current line number (where cursor is) not sire this one is useful.
+-- I'll comment it for now and delete after some time if I see no difference.
+-- vim.cmd("hi CursorLineNr guifg=#ff9e64 gui=bold")
 
 -- Relative numbers above and below
 vim.cmd("hi LineNrAbove guifg=#9ece6a")
